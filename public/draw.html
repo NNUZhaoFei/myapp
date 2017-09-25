@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>draw</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body
+<div id="div1" ></div>
+
+<script type="text/javascript">
+    
+      //加入页面
+      var element = document.getElementById("div1");
+      //创建段落
+      var canvas = document.createElement("canvas");
+      var ctx = canvas.getContext("2d");//返回一个二维的绘画环境
+      
+      ctx.fillStyle="#FF0000";          //设置或返回用于填充绘画的颜色、渐变或模式
+      ctx.fillRect(0,0,150,75);         //绘制一个已填充的矩形框ctx.fillRect（x，y，width，height）
+      ctx.moveTo(0,0);
+      ctx.lineTo(200,100);
+      ctx.stroke();                    //stroke() 方法会实际地绘制出通过 moveTo() 和 lineTo() 方法定义的路径。默认颜色是黑色。
+     
+      element.appendChild(canvas);
+      
+      
+      window.caresize=click1;
+     window.caresize("div1");
+
+      
+      function click1(id){
+      var element = document.getElementById("div1");
+      var width = element.clientWidth;
+      var height = element.clientHeight;
+      console.log("width:\d,height:\d,width,height");
+      }   
+     </script>
+</body>
+</html>
